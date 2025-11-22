@@ -350,7 +350,7 @@ export const Features: React.FC = () => {
               <div className="flex items-center justify-center gap-4 text-gray-500 text-sm pt-2">
                 <div className="flex -space-x-3">
                   {socialAvatars.map((src, i) => (
-                    <div key={i} className="w-9 h-9 rounded-full bg-surface border-2 border-primary overflow-hidden grayscale hover:grayscale-0 transition-all">
+                    <div key={i} className="w-9 h-9 rounded-full bg-surface border-2 border-primary overflow-hidden transition-all">
                       <img src={src} alt="User" className="w-full h-full object-cover" />
                     </div>
                   ))}

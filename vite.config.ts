@@ -5,7 +5,9 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   define: {
-    'process.env': process.env
+    // Evita injetar o objeto process.env inteiro, o que pode causar erros circulares.
+    // Injeta apenas o que é necessário ou um objeto vazio para evitar crash.
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
   },
   build: {
     outDir: 'dist',

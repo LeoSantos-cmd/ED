@@ -48,7 +48,13 @@ export const AIConsultant: React.FC = () => {
       const botMsg: Message = { id: (Date.now() + 1).toString(), role: 'model', text: responseText };
       setMessages(prev => [...prev, botMsg]);
     } catch (error) {
-      console.error(error);
+      console.error("Erro ao enviar mensagem:", error);
+      // Fallback message em caso de erro para não travar a UI
+      setMessages(prev => [...prev, { 
+        id: Date.now().toString(), 
+        role: 'model', 
+        text: "Desculpe, tive um problema técnico momentâneo. Poderia tentar novamente?" 
+      }]);
     } finally {
       setIsLoading(false);
     }
@@ -134,7 +140,10 @@ export const AIConsultant: React.FC = () => {
                 className="flex-1 bg-primary border border-white/10 rounded-lg px-4 py-3 text-sm focus:ring-1 focus:ring-accent focus:border-accent focus:outline-none text-gray-200 placeholder-gray-600"
               />
               <button
-                onClick={handleSend}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleSend();
+                }}
                 disabled={isLoading || !input.trim()}
                 className="bg-accent hover:bg-accentLight text-black p-3 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >

@@ -49,7 +49,7 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-primary text-gray-200 overflow-x-hidden font-sans">
+    <div className="min-h-screen bg-primary text-gray-200 overflow-x-hidden font-sans text-base">
       {/* Header */}
       <header className={`fixed w-full z-40 transition-all duration-300 ${scrolled ? 'bg-primary/95 backdrop-blur border-b border-white/10 py-3' : 'bg-transparent py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
@@ -64,15 +64,15 @@ const App: React.FC = () => {
             {['Método', 'Garantia', 'FAQ'].map((item, idx) => (
               <button 
                 key={idx} 
-                onClick={() => scrollTo(item === 'Método' ? 'beneficios' : item.toLowerCase())}
-                className="font-medium text-sm text-gray-300 hover:text-accent transition-colors uppercase tracking-wide"
+                onClick={() => scrollTo(item === 'Método' ? 'metodo' : item.toLowerCase())}
+                className="font-medium text-base text-gray-300 hover:text-accent transition-colors uppercase tracking-wide"
               >
                 {item}
               </button>
             ))}
             <button 
               onClick={() => scrollTo('planos')}
-              className="bg-gradient-to-r from-accent to-accentLight hover:brightness-110 text-black px-6 py-3 rounded-lg font-bold text-sm transition-all transform hover:scale-105 shadow-lg shadow-accent/20"
+              className="bg-gradient-to-r from-accent to-accentLight hover:brightness-110 text-black px-6 py-3 rounded-lg font-bold text-base transition-all transform hover:scale-105 shadow-lg shadow-accent/20"
             >
               QUERO COMEÇAR
             </button>
@@ -88,15 +88,15 @@ const App: React.FC = () => {
              {['Método', 'Garantia', 'FAQ'].map((item, idx) => (
               <button 
                 key={idx} 
-                onClick={() => scrollTo(item === 'Método' ? 'beneficios' : item.toLowerCase())}
-                className="text-left py-3 px-4 text-gray-200 font-medium border-b border-white/5 hover:bg-white/5 rounded-lg transition-colors text-base"
+                onClick={() => scrollTo(item === 'Método' ? 'metodo' : item.toLowerCase())}
+                className="text-left py-3 px-4 text-gray-200 font-medium border-b border-white/5 hover:bg-white/5 rounded-lg transition-colors text-lg"
               >
                 {item}
               </button>
             ))}
              <button 
               onClick={() => scrollTo('planos')}
-              className="bg-accent text-black w-full py-4 rounded-lg font-bold shadow-lg shadow-accent/20 mt-2 text-base"
+              className="bg-accent text-black w-full py-4 rounded-lg font-bold shadow-lg shadow-accent/20 mt-2 text-lg"
             >
               COMEÇAR AGORA
             </button>
@@ -105,7 +105,7 @@ const App: React.FC = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-8 lg:pt-32 lg:pb-10 bg-primary overflow-hidden">
+      <section className="relative pt-24 pb-8 lg:pt-28 lg:pb-12 bg-primary overflow-hidden">
         <div className="absolute inset-0 z-0 select-none pointer-events-none">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-[120px] mix-blend-screen opacity-30"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[120px] mix-blend-screen opacity-20"></div>
@@ -119,17 +119,11 @@ const App: React.FC = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto md:mx-0">
-            <FadeIn direction="down" delay={0}>
-              <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur px-4 py-1.5 rounded-full text-accentLight text-xs font-bold tracking-widest uppercase mb-6 border border-accent/20 shadow-[0_0_15px_rgba(217,119,6,0.1)]">
-                <ShieldCheck size={14} />
-                Fórmula Clinicamente Testada
-              </div>
-            </FadeIn>
             
             <FadeIn delay={100}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6 tracking-tight">
                 Você sabe o que é o RABS™?
-                <span className="block mt-2 text-2xl md:text-4xl lg:text-5xl font-bold text-gray-400 leading-normal">
+                <span className="block mt-2 text-xl md:text-4xl lg:text-5xl font-bold text-gray-400 leading-normal">
                   É o reflexo de <span className="text-transparent bg-clip-text bg-gradient-to-r from-danger via-red-600 to-danger uppercase tracking-wider font-black filter drop-shadow-lg animate-pulse">BLOQUEIO</span> que o seu cérebro cria para te proteger da <span className="relative inline-block px-3 mx-1 before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-danger before:rounded-sm shadow-2xl"><span className="relative text-white font-black italic tracking-wide">HUMILHAÇÃO</span></span>
                 </span>
               </h1>
@@ -148,7 +142,7 @@ const App: React.FC = () => {
                     </div>
                   </div>
                   <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black via-black/80 to-transparent z-30">
-                    <p className="text-gray-200 text-sm font-semibold flex items-center gap-2 tracking-wide">
+                    <p className="text-gray-200 text-base font-semibold flex items-center gap-2 tracking-wide">
                       <span className="relative flex h-3 w-3">
                           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
                           <span className="relative inline-flex rounded-full h-3 w-3 bg-danger"></span>
@@ -164,7 +158,7 @@ const App: React.FC = () => {
                 <p className="text-white font-bold text-lg md:text-xl mb-3">
                   90% dos casos de falha não são físicos, mas sim causados pelo RABS™.
                 </p>
-                <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
+                <p className="text-base md:text-lg text-gray-400 leading-relaxed">
                   Aprenda a desligar o <strong className="text-white font-bold">RABS™</strong> e recuperar o controle da sua ereção.
                   <span className="block mt-2 text-base md:text-lg">Sem depender de remédios nem sorte. <span className="text-accent font-bold">Apenas potência crua.</span></span>
                 </p>
@@ -175,34 +169,34 @@ const App: React.FC = () => {
               <div className="w-full max-w-md flex flex-col gap-4">
                 <button
                   onClick={() => scrollTo('planos')}
-                  className="group relative w-full bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-black text-xl md:text-2xl py-5 px-8 rounded-lg shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(245,158,11,0.4)] flex items-center justify-center gap-3 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 overflow-hidden"
+                  className="group relative w-full bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-black text-xl py-5 px-8 rounded-lg shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(245,158,11,0.4)] flex items-center justify-center gap-3 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 overflow-hidden"
                 >
                   <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none"></div>
                   <span className="relative z-10">CONHECER PROTOCOLO</span>
                 </button>
 
-                <div className="flex flex-wrap justify-center items-center gap-3 text-gray-500 text-xs md:text-sm font-medium w-full text-center uppercase tracking-wide">
+                <div className="flex flex-wrap justify-center items-center gap-3 text-gray-400 text-base font-medium w-full text-center uppercase tracking-wide">
                   <div className="flex items-center gap-1.5">
-                    <Lock className="w-3.5 h-3.5 text-accent" />
-                    <span className="text-gray-400">Acesso imediato</span>
+                    <Lock className="w-5 h-5 text-accent" />
+                    <span>Acesso imediato</span>
                   </div>
                   <span className="text-gray-700 hidden md:inline">•</span>
-                  <div className="text-gray-400">
+                  <div>
                     A partir de <span className="text-accentLight font-bold">R$ 1,99</span>
                   </div>
                   <span className="text-gray-700 hidden md:inline">•</span>
-                  <div className="text-gray-400">Risco Zero</div>
+                  <div>Risco Zero</div>
                 </div>
 
-                <div className="mt-2 flex items-center gap-4 text-gray-500 text-sm w-fit">
+                <div className="mt-2 flex items-center gap-4 text-gray-400 text-base w-fit">
                   <div className="flex -space-x-3">
                     {socialAvatars.map((src, i) => (
-                      <div key={i} className="w-9 h-9 rounded-full bg-surface border-2 border-primary overflow-hidden transition-all">
+                      <div key={i} className="w-12 h-12 rounded-full bg-surface border-2 border-primary overflow-hidden transition-all">
                         <img src={src} alt="User" className="w-full h-full object-cover" />
                       </div>
                     ))}
                   </div>
-                  <p>Mais de <span className="text-white font-bold">4.500</span> homens satisfeitos.</p>
+                  <p className="text-base">Mais de <span className="text-white font-bold">4.500</span> homens satisfeitos.</p>
                 </div>
               </div>
             </FadeIn>
@@ -225,7 +219,7 @@ const App: React.FC = () => {
                <ShieldCheck className="w-10 h-10 text-accent relative z-10" />
             </div>
             <h2 className="text-3xl font-bold text-white mb-4 tracking-tight">Garantia Blindada de 7 Dias</h2>
-            <p className="text-lg text-gray-400 mb-6 leading-relaxed max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-400 mb-6 leading-relaxed max-w-2xl mx-auto">
               Acesse o método e aplique o primeiro destravamento. Se você não sentir que está retomando o controle ou que esse produto não é para você, devolvemos 100% do seu investimento.
               <span className="block mt-3 text-white font-bold">Sem burocracia. Sem perguntas.</span>
               O valor é simbólico perto da transformação que você vai viver.
@@ -242,13 +236,13 @@ const App: React.FC = () => {
                 <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600" alt="Especialista" className="w-full h-full object-cover" />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6">
                   <p className="text-white font-bold text-lg">Dr. Ricardo Mendes</p>
-                  <p className="text-accent text-sm">Especialista em Saúde Masculina</p>
+                  <p className="text-accent text-base">Especialista em Saúde Masculina</p>
                 </div>
              </div>
            </div>
            <div className="flex-1">
              <FadeIn>
-               <h2 className="text-3xl font-bold text-white mb-4">Quem Criou o Método?</h2>
+               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Quem Criou o Método?</h2>
                <div className="space-y-4 text-base md:text-lg text-gray-400 leading-relaxed">
                  <p>
                    Olá, sou Ricardo Mendes. Nos últimos 15 anos, dediquei minha carreira a estudar o que ninguém queria falar: <strong className="text-white">a ansiedade sexual masculina.</strong>
@@ -270,7 +264,7 @@ const App: React.FC = () => {
         <div className="max-w-3xl mx-auto px-4">
            <FadeIn>
              <h2 className="text-center text-3xl font-bold text-white mb-2 tracking-tight">Perguntas Frequentes</h2>
-             <p className="text-center text-base text-gray-500 mb-8">Tire suas dúvidas sobre o protocolo</p>
+             <p className="text-center text-base md:text-lg text-gray-500 mb-8">Tire suas dúvidas sobre o protocolo</p>
            </FadeIn>
            <div className="space-y-3">
              {[
@@ -283,9 +277,9 @@ const App: React.FC = () => {
                <FadeIn key={idx} delay={idx * 100}>
                  <div className="bg-surface rounded-xl border border-white/5 p-5 hover:border-accent/30 transition-colors group">
                    <div className="flex gap-4">
-                     <HelpCircle className="shrink-0 text-accent mt-1" size={20} />
+                     <HelpCircle className="shrink-0 text-accent mt-1" size={24} />
                      <div>
-                       <h3 className="font-bold text-lg text-gray-200 mb-1 group-hover:text-white transition-colors">{item.q}</h3>
+                       <h3 className="font-bold text-lg text-gray-200 mb-2 group-hover:text-white transition-colors">{item.q}</h3>
                        <p className="text-base text-gray-400 font-light leading-relaxed">{item.a}</p>
                      </div>
                    </div>
@@ -297,20 +291,20 @@ const App: React.FC = () => {
       </section>
 
       {/* Urgency Section Moved Here */}
-      <section className="bg-secondary py-5 border-y border-white/5">
+      <section className="bg-secondary py-6 border-y border-white/5">
         <div className="max-w-4xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-5 text-center md:text-left">
            <div className="flex items-center gap-2 text-danger animate-pulse">
-             <AlertCircle size={22} />
-             <span className="font-bold uppercase tracking-widest text-sm">Condições Especiais de Lançamento</span>
+             <AlertCircle size={24} />
+             <span className="font-bold uppercase tracking-widest text-base">Condições Especiais de Lançamento</span>
            </div>
            <div className="flex items-center gap-3 bg-primary/50 px-5 py-2.5 rounded-lg border border-white/10">
-             <Clock size={18} className="text-gray-400" />
+             <Clock size={20} className="text-gray-400" />
              <div className="flex gap-1 font-mono text-xl md:text-2xl font-bold text-white">
                <span>{timeLeft.hours.toString().padStart(2, '0')}</span>:
                <span>{timeLeft.minutes.toString().padStart(2, '0')}</span>:
                <span>{timeLeft.seconds.toString().padStart(2, '0')}</span>
              </div>
-             <span className="text-xs text-gray-500 uppercase">para o fim da oferta</span>
+             <span className="text-base text-gray-500 uppercase">para o fim da oferta</span>
            </div>
         </div>
       </section>
@@ -324,12 +318,12 @@ const App: React.FC = () => {
               Você não é "broxa". <br />
               Você só precisa ser reprogramado.
             </h2>
-            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
               Pare de aceitar o silêncio e a vergonha. Desligue o RABS™ hoje mesmo e recupere o controle da sua vida.
             </p>
             <button 
               onClick={() => scrollTo('planos')}
-              className="bg-accent hover:bg-accentLight text-black text-xl font-black py-4 px-10 rounded-full shadow-[0_0_50px_rgba(217,119,6,0.4)] hover:shadow-[0_0_70px_rgba(217,119,6,0.6)] transition-all transform hover:scale-105"
+              className="bg-accent hover:bg-accentLight text-black text-lg md:text-xl font-black py-4 px-10 rounded-full shadow-[0_0_50px_rgba(217,119,6,0.4)] hover:shadow-[0_0_70px_rgba(217,119,6,0.6)] transition-all transform hover:scale-105"
             >
               QUERO COMEÇAR AGORA
             </button>
@@ -338,40 +332,30 @@ const App: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-secondary text-gray-500 py-8 border-t border-white/10 text-sm">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+      <footer className="bg-secondary text-gray-500 py-10 border-t border-white/10 text-base">
+        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4 opacity-80">
-                <div className="bg-accent text-white p-1.5 rounded text-xs font-bold">VM</div>
-                <span className="font-bold text-lg text-white">VigorMax Pro</span>
+                <div className="bg-accent text-white p-1.5 rounded text-sm font-bold">VM</div>
+                <span className="font-bold text-xl text-white">VigorMax Pro</span>
             </div>
-            <p className="mb-4 leading-relaxed text-gray-400 text-sm">
+            <p className="mb-4 leading-relaxed text-gray-400 text-base">
               "Nossa missão é devolver ao homem o controle sobre o próprio corpo e a própria masculinidade, através de conhecimento e prática, sem dependência química."
             </p>
-            <p>&copy; 2024 VigorMax Pro. Todos os direitos reservados.</p>
+            <p className="text-base">&copy; 2024 VigorMax Pro. Todos os direitos reservados.</p>
           </div>
           
           <div>
-            <h4 className="text-white font-bold mb-3 uppercase text-xs tracking-widest">Links Úteis</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-accent transition-colors">Início</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Método</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Planos</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">Área de Membros</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-white font-bold mb-3 uppercase text-xs tracking-widest">Legal</h4>
-            <ul className="space-y-2">
-              <li><a href="#" className="hover:text-white transition-colors">Termos de Uso</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Aviso Legal</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contato</a></li>
+            <h4 className="text-white font-bold mb-4 uppercase text-base tracking-widest">Legal</h4>
+            <ul className="space-y-3">
+              <li><a href="#" className="text-base hover:text-white transition-colors">Termos de Uso</a></li>
+              <li><a href="#" className="text-base hover:text-white transition-colors">Política de Privacidade</a></li>
+              <li><a href="#" className="text-base hover:text-white transition-colors">Aviso Legal</a></li>
+              <li><a href="#" className="text-base hover:text-white transition-colors">Contato</a></li>
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-xs text-gray-600">
+        <div className="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-base text-gray-600">
           Este site não é afiliado ao Facebook ou Google. Os resultados podem variar de pessoa para pessoa.
         </div>
       </footer>

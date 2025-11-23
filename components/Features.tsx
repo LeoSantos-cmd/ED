@@ -5,22 +5,22 @@ import { FadeIn } from './FadeIn';
 export const Features: React.FC = () => {
   const benefits = [
     {
-      icon: <AlertTriangle className="w-8 h-8 text-danger" />, // Trocado para Alerta (Perigo/Falha)
+      icon: <AlertTriangle className="w-8 h-8 text-danger" />,
       title: "Falhar na Hora H",
       desc: "Você sente a ansiedade crescendo. O coração acelera. Quando chega o momento... NADA ACONTECE. E mais uma vez, aquele terror do constrangimento te destrói."
     },
     {
-      icon: <Ban className="w-8 h-8 text-accent" />, // Trocado para Bloqueio (Trava)
+      icon: <Ban className="w-8 h-8 text-accent" />,
       title: "Funciona Sozinho, Trava com Ela",
       desc: "Sozinho, tudo funciona perfeitamente. Mas quando há uma mulher real ao seu lado, é como se sua potência fosse desligada. A agonia de não entender o \"porque\" te corrói por dentro."
     },
     {
-      icon: <MessageSquareWarning className="w-8 h-8 text-accent" />, // Trocado para Alerta de Mensagem (Palavras/Julgamento)
+      icon: <MessageSquareWarning className="w-8 h-8 text-accent" />,
       title: "Medo de Ser Chamado de 'Broxa'",
       desc: "Aquela palavra que corta fundo. O medo constante de ser rotulado, julgado, diminuído. De não ser visto como homem. O pior... se sentir realmente menos homem."
     },
     {
-      icon: <UserMinus className="w-8 h-8 text-accent" />, // Trocado para UserMinus (Menos Homem)
+      icon: <UserMinus className="w-8 h-8 text-accent" />,
       title: "Sensação de Ser 'Menos Homem'",
       desc: "Cada falha tira um pedaço da sua masculinidade. Você olha no espelho e não reconhece mais o homem que deveria ser. Pois sabe que o PAPEL NATURAL DE UM HOMEM é dar muito prazer a sua mulher."
     }
@@ -97,14 +97,6 @@ export const Features: React.FC = () => {
     }
   ];
 
-  // Avatares reais para o CTA Block - Correspondendo aos do App.tsx
-  const socialAvatars = [
-    "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&h=100&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1557862921-37829c790f19?w=100&h=100&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?w=100&h=100&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1581382575275-97901c2635b7?w=100&h=100&fit=crop&crop=faces"
-  ];
-
   return (
     <section id="beneficios" className="py-6 bg-secondary border-t border-white/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -113,7 +105,7 @@ export const Features: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 tracking-tight">
               Você Sabe Exatamente Do Que Estou Falando
             </h2>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto font-light">
+            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
               Aquele momento em que você percebe que o medo está no controle, não você.
             </p>
           </FadeIn>
@@ -131,8 +123,8 @@ export const Features: React.FC = () => {
                   <div className="bg-black/40 w-14 h-14 rounded-xl flex items-center justify-center mb-4 mx-auto border border-white/5 group-hover:border-accent/50 transition-colors">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 leading-tight">{item.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">{item.title}</h3>
+                  <p className="text-gray-400 text-base leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -147,42 +139,33 @@ export const Features: React.FC = () => {
             {/* Dark accent glow */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-danger/5 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
             
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-6 tracking-tight border-l-4 border-danger pl-5">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-tight border-l-4 border-danger pl-5">
               O Ciclo Que Te Aprisiona
             </h3>
 
             <div className="relative pl-5 space-y-6">
                {/* Vertical line */}
-               <div className="absolute left-[29px] top-4 bottom-8 w-0.5 bg-white/10"></div>
+               <div className="absolute left-[36px] top-4 bottom-8 w-0.5 bg-white/10"></div>
 
-               {/* Step 1 */}
-               <div className="relative flex items-center gap-4 group">
-                 <div className="w-8 h-8 rounded-full bg-surface border border-danger/40 flex items-center justify-center text-danger font-bold text-xs shadow-[0_0_15px_rgba(153,27,27,0.15)] relative z-10 group-hover:scale-110 transition-transform duration-300">1</div>
-                 <p className="text-gray-300 text-sm md:text-base">Você sente <span className="text-danger font-bold">medo</span> de falhar novamente</p>
-               </div>
-
-               {/* Step 2 */}
-               <div className="relative flex items-center gap-4 group">
-                 <div className="w-8 h-8 rounded-full bg-surface border border-accent/40 flex items-center justify-center text-accent font-bold text-xs shadow-[0_0_15px_rgba(217,119,6,0.15)] relative z-10 group-hover:scale-110 transition-transform duration-300">2</div>
-                 <p className="text-gray-300 text-sm md:text-base">O medo ativa o <span className="text-accent font-bold">RABS™</span> (reflexo de bloqueio)</p>
-               </div>
-
-               {/* Step 3 */}
-               <div className="relative flex items-center gap-4 group">
-                 <div className="w-8 h-8 rounded-full bg-surface border border-danger/40 flex items-center justify-center text-danger font-bold text-xs shadow-[0_0_15px_rgba(153,27,27,0.15)] relative z-10 group-hover:scale-110 transition-transform duration-300">3</div>
-                 <p className="text-gray-300 text-sm md:text-base">Você <span className="text-danger font-bold">falha</span> mais uma vez</p>
-               </div>
-
-               {/* Step 4 */}
-               <div className="relative flex items-center gap-4 group">
-                 <div className="w-8 h-8 rounded-full bg-surface border border-danger/40 flex items-center justify-center text-danger font-bold text-xs shadow-[0_0_15px_rgba(153,27,27,0.15)] relative z-10 group-hover:scale-110 transition-transform duration-300">4</div>
-                 <p className="text-gray-300 text-sm md:text-base">O medo <span className="text-danger font-bold">aumenta</span> ainda mais</p>
-               </div>
+               {/* Steps */}
+               {[
+                 { num: 1, text: <>Você sente <span className="text-danger font-bold">medo</span> de falhar novamente</>, border: "border-danger/40", textCol: "text-danger" },
+                 { num: 2, text: <>O medo ativa o <span className="text-accent font-bold">RABS™</span> (reflexo de bloqueio)</>, border: "border-accent/40", textCol: "text-accent" },
+                 { num: 3, text: <>Você <span className="text-danger font-bold">falha</span> mais uma vez</>, border: "border-danger/40", textCol: "text-danger" },
+                 { num: 4, text: <>O medo <span className="text-danger font-bold">aumenta</span> ainda mais</>, border: "border-danger/40", textCol: "text-danger" }
+               ].map((step, idx) => (
+                 <div key={idx} className="relative flex items-center gap-4 group">
+                    <div className={`w-10 h-10 rounded-full bg-surface border ${step.border} flex items-center justify-center ${step.textCol} font-bold text-base shadow-lg relative z-10 group-hover:scale-110 transition-transform duration-300`}>
+                      {step.num}
+                    </div>
+                    <p className="text-gray-300 text-base">{step.text}</p>
+                 </div>
+               ))}
             </div>
 
             <div className="mt-6 bg-gradient-to-r from-surface to-transparent border-l-4 border-danger p-4 rounded-r-lg">
-               <h4 className="text-white font-bold text-base mb-1">E o ciclo se repete. Cada vez pior. Cada vez mais forte.</h4>
-               <p className="text-sm text-gray-500">Até que você começa a evitar completamente as situações íntimas.</p>
+               <h4 className="text-white font-bold text-base md:text-lg mb-1">E o ciclo se repete. Cada vez pior. Cada vez mais forte.</h4>
+               <p className="text-base text-gray-500">Até que você começa a evitar completamente as situações íntimas.</p>
             </div>
 
             <div className="mt-6 relative">
@@ -204,24 +187,24 @@ export const Features: React.FC = () => {
                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
                  
                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">Mas e se eu te disser que...</h3>
-                 <p className="text-lg md:text-xl text-accent font-medium leading-relaxed">
+                 <p className="text-base md:text-xl text-accent font-medium leading-relaxed">
                    O problema não está no seu corpo. Está no comando que ele recebe.
                  </p>
             </div>
 
-            {/* The Good News Card - Compact Version */}
-            <div className="bg-surface border border-white/10 rounded-xl px-4 py-3 flex flex-col justify-center text-center relative overflow-hidden shadow-2xl max-w-[260px] md:max-w-xs mx-auto">
-                <h3 className="text-sm font-bold text-white mb-1.5">A Boa Notícia É:</h3>
+            {/* The Good News Card - Compact Version with readable font */}
+            <div className="bg-surface border border-white/10 rounded-xl px-4 py-3 flex flex-col justify-center text-center relative overflow-hidden shadow-2xl max-w-[280px] md:max-w-xs mx-auto">
+                <h3 className="text-base md:text-lg font-bold text-white mb-1.5">A Boa Notícia É:</h3>
                 
-                <div className="text-xs text-gray-400 leading-tight space-y-0.5 font-light">
+                <div className="text-base text-gray-400 leading-tight space-y-0.5 font-light">
                     <p>Reflexos podem ser</p>
-                    <p className="text-accent font-black text-base uppercase tracking-tight py-0.5">desaprendidos</p>
+                    <p className="text-accent font-black text-lg uppercase tracking-tight py-0.5">desaprendidos</p>
                     <p>e novos reflexos podem ser</p>
-                    <p className="text-accent font-black text-base uppercase tracking-tight py-0.5">instalados.</p>
+                    <p className="text-accent font-black text-lg uppercase tracking-tight py-0.5">instalados.</p>
                 </div>
 
                 <div className="mt-2 pt-2 border-t border-white/10">
-                    <p className="text-white font-bold text-xs">
+                    <p className="text-white font-bold text-base">
                         É o que a neurociência comprova.
                     </p>
                 </div>
@@ -229,7 +212,7 @@ export const Features: React.FC = () => {
 
             {/* The Visualization Text */}
             <div className="flex flex-col items-center gap-4 pt-4">
-                <div className="px-4 py-2 rounded-full border border-accent/20 text-accent bg-accent/5 text-xs font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(217,119,6,0.1)]">
+                <div className="px-4 py-2 rounded-full border border-accent/20 text-accent bg-accent/5 text-base font-bold uppercase tracking-widest shadow-[0_0_15px_rgba(217,119,6,0.1)]">
                     Imagine Por Um Momento...
                 </div>
                 <h2 className="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight">
@@ -240,7 +223,7 @@ export const Features: React.FC = () => {
                       </svg>
                     </span>
                 </h2>
-                <p className="text-gray-400 text-lg max-w-2xl font-light">
+                <p className="text-gray-400 text-lg md:text-xl max-w-2xl font-light">
                     Porque esse será você daqui pra frente.
                 </p>
             </div>
@@ -256,7 +239,7 @@ export const Features: React.FC = () => {
                     </div>
                     <div>
                         <h3 className="text-3xl font-black text-white leading-none tracking-tight">RCS™</h3>
-                        <p className="text-gray-400 text-sm font-medium tracking-wide">Reflexo de Confiança Sexual</p>
+                        <p className="text-gray-400 text-lg font-medium tracking-wide">Reflexo de Confiança Sexual</p>
                     </div>
                  </div>
 
@@ -269,7 +252,7 @@ export const Features: React.FC = () => {
                     </p>
 
                     <div className="bg-black/30 rounded-xl p-5 border border-white/5 my-4">
-                        <h4 className="text-white font-bold mb-3 text-sm uppercase tracking-wider">Com o RCS™ instalado, você experimenta:</h4>
+                        <h4 className="text-white font-bold mb-3 text-base uppercase tracking-wider">Com o RCS™ instalado, você experimenta:</h4>
                         <ul className="space-y-2.5">
                             {[
                                 "Ereção natural e estável",
@@ -277,7 +260,7 @@ export const Features: React.FC = () => {
                                 "Confiança que não depende de remédios",
                                 "Resposta corporal automática e positiva"
                             ].map((item, i) => (
-                                <li key={i} className="flex items-start gap-3 text-sm md:text-base text-gray-300">
+                                <li key={i} className="flex items-start gap-3 text-base text-gray-300">
                                     <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                                     <span>{item}</span>
                                 </li>
@@ -323,7 +306,7 @@ export const Features: React.FC = () => {
                desc: "Você chega na hora H sabendo que vai funcionar. Sem tremedeira. Sem suor frio. Apenas confiança pura."
              },
              {
-               icon: <Activity className="w-6 h-6 text-accent" />, // Changed from Check to Activity
+               icon: <Activity className="w-6 h-6 text-accent" />,
                title: "Ereção Firme em Qualquer Situação",
                desc: "Camisinha, primeira vez com alguém novo, luz acesa... nada disso importa mais. Seu corpo responde como deveria."
              },
@@ -345,7 +328,7 @@ export const Features: React.FC = () => {
                    </div>
                    <div>
                       <h3 className="text-white font-bold text-lg mb-1 group-hover:text-accentLight transition-colors">{item.title}</h3>
-                      <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                      <p className="text-gray-400 text-base leading-relaxed">{item.desc}</p>
                    </div>
                 </div>
               </FadeIn>
@@ -367,8 +350,8 @@ export const Features: React.FC = () => {
                    "Relacionamentos tensos",
                    "Autoestima destruída"
                  ].map((item, i) => (
-                   <li key={i} className="flex items-center gap-3 text-gray-400 text-sm md:text-base">
-                     <X className="w-4 h-4 text-danger shrink-0" />
+                   <li key={i} className="flex items-center gap-3 text-gray-400 text-base">
+                     <X className="w-5 h-5 text-danger shrink-0" />
                      <span>{item}</span>
                    </li>
                  ))}
@@ -389,9 +372,9 @@ export const Features: React.FC = () => {
                    "Relacionamentos leves e saudáveis",
                    "Autoestima restaurada"
                  ].map((item, i) => (
-                   <li key={i} className="flex items-center gap-3 text-white font-medium text-sm md:text-base">
+                   <li key={i} className="flex items-center gap-3 text-white font-medium text-base">
                      <div className="bg-accent/10 p-1 rounded-full">
-                        <Check className="w-3.5 h-3.5 text-accent shrink-0" />
+                        <Check className="w-4 h-4 text-accent shrink-0" />
                      </div>
                      <span>{item}</span>
                    </li>
@@ -405,20 +388,20 @@ export const Features: React.FC = () => {
         {/* Transition to Method */}
         <FadeIn delay={500} className="w-full flex flex-col items-center mt-8 mb-10 px-4 text-center">
             <div className="space-y-3">
-                <p className="text-lg md:text-2xl text-gray-300 font-medium leading-tight">
+                <p className="text-xl md:text-2xl text-gray-300 font-medium leading-tight">
                     Mas como exatamente isso funciona?{" "}
                     <span className="inline-block w-2"></span>
                     <br className="hidden md:block" />
                     Como você vai sair do bloqueio para a confiança?
                 </p>
-                <h2 className="text-3xl md:text-5xl font-black text-accent tracking-tighter drop-shadow-[0_0_25px_rgba(217,119,6,0.3)] pt-2">
+                <h2 className="text-4xl md:text-5xl font-black text-accent tracking-tighter drop-shadow-[0_0_25px_rgba(217,119,6,0.3)] pt-2">
                     É aqui que entra o método.
                 </h2>
             </div>
         </FadeIn>
 
         {/* "O Despertar do Controle Masculino" Section - Container Visible immediately */}
-        <div className="mb-10 max-w-6xl mx-auto px-4">
+        <div id="metodo" className="mb-10 max-w-6xl mx-auto px-4 pt-20 -mt-20">
              <div className="relative rounded-3xl border border-accent/20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/20 via-[#121214] to-[#0a0a0b] p-6 md:p-10 overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent shadow-[0_0_20px_rgba(217,119,6,0.5)]"></div>
 
@@ -447,7 +430,7 @@ export const Features: React.FC = () => {
                     </FadeIn>
 
                     <FadeIn delay={100} className="flex-1 w-full">
-                        <p className="text-gray-300 text-lg leading-relaxed mb-8">
+                        <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
                             Este não é mais um produto que promete milagres. É um <strong className="text-white">método estruturado</strong>, em formato de protocolo digital, focado em três pilares:
                         </p>
 
@@ -568,17 +551,17 @@ export const Features: React.FC = () => {
                                             <div>
                                                 <h4 className="text-white font-bold text-base">{story.name}, <span className="text-gray-500 font-normal">{story.age} anos</span></h4>
                                                 <div className="flex gap-0.5 text-accent my-1">
-                                                    {[1,2,3,4,5].map(s => <Star key={s} size={12} fill="currentColor" />)}
+                                                    {[1,2,3,4,5].map(s => <Star key={s} size={14} fill="currentColor" />)}
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 italic relative z-10">
+                                        <p className="text-gray-300 text-base leading-relaxed mb-6 italic relative z-10">
                                             "{story.text}"
                                         </p>
 
                                         <div className="mt-auto border-l-4 border-accent bg-white/5 p-3 rounded-r-xl">
-                                            <p className="text-white font-bold text-sm">{story.summary}</p>
+                                            <p className="text-white font-bold text-base">{story.summary}</p>
                                         </div>
                                     </div>
                                 </FadeIn>
@@ -586,7 +569,7 @@ export const Features: React.FC = () => {
                         </div>
                     </div>
                     
-                    {/* Mais de 100+ homens Block */}
+                    {/* Mais de 4.500+ homens Block */}
                     <FadeIn delay={200} className="max-w-3xl mx-auto mt-16">
                         <div className="bg-surface/30 border border-accent/30 rounded-2xl p-8 text-center shadow-[0_0_30px_rgba(217,119,6,0.1)] relative overflow-hidden">
                             <div className="md:hidden absolute inset-0 w-full h-full -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/5 to-transparent z-0 pointer-events-none"></div>
@@ -597,10 +580,10 @@ export const Features: React.FC = () => {
                             </h3>
                             
                             <div className="space-y-2 relative z-10">
-                                <p className="text-gray-400 text-lg leading-relaxed">
+                                <p className="text-gray-400 text-base md:text-lg leading-relaxed">
                                     Cada um com sua história. Cada um com seus gatilhos. Mas todos com o mesmo resultado:
                                 </p>
-                                <p className="text-accent font-bold text-xl tracking-wide pt-1">
+                                <p className="text-accent font-bold text-lg md:text-xl tracking-wide pt-1">
                                     recuperação do controle e da confiança.
                                 </p>
                             </div>

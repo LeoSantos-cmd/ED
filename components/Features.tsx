@@ -97,6 +97,48 @@ export const Features: React.FC = () => {
     }
   ];
 
+  // Reusable CTA Block
+  const CTAButtonBlock = () => (
+    <div className="w-full max-w-md mx-auto flex flex-col gap-4 mt-8">
+      <a
+        href="#planos"
+        className="group relative w-full bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-black text-xl py-5 px-8 rounded-lg shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(245,158,11,0.4)] flex items-center justify-center gap-3 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 overflow-hidden"
+      >
+        <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none"></div>
+        <span className="relative z-10">CONHECER PROTOCOLO</span>
+      </a>
+
+      <div className="flex flex-wrap justify-center items-center gap-3 text-gray-400 text-sm font-medium w-full text-center uppercase tracking-wide">
+        <div className="flex items-center gap-1.5">
+          <Lock className="w-4 h-4 text-accent" />
+          <span>Acesso imediato</span>
+        </div>
+        <span className="text-gray-700 hidden md:inline">•</span>
+        <div>
+          A partir de <span className="text-accentLight font-bold">R$ 1,99</span>
+        </div>
+        <span className="text-gray-700 hidden md:inline">•</span>
+        <div>Risco Zero</div>
+      </div>
+
+      <div className="mt-2 flex justify-center items-center gap-4 text-gray-400 text-base">
+        <div className="flex -space-x-3">
+          {[
+            "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&h=100&fit=crop&crop=faces",
+            "https://images.unsplash.com/photo-1557862921-37829c790f19?w=100&h=100&fit=crop&crop=faces",
+            "https://images.unsplash.com/photo-1480455624313-e29b44bbfde1?w=100&h=100&fit=crop&crop=faces",
+            "https://images.unsplash.com/photo-1581382575275-97901c2635b7?w=100&h=100&fit=crop&crop=faces"
+          ].map((src, i) => (
+            <div key={i} className="w-10 h-10 rounded-full bg-surface border-2 border-primary overflow-hidden">
+              <img src={src} alt="User" className="w-full h-full object-cover" />
+            </div>
+          ))}
+        </div>
+        <p className="text-base">Mais de <span className="text-white font-bold">4.500</span> homens satisfeitos.</p>
+      </div>
+    </div>
+  );
+
   return (
     <section id="beneficios" className="py-6 bg-secondary border-t border-white/5">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -274,6 +316,7 @@ export const Features: React.FC = () => {
                         Você não está "consertando" nada. Você está reprogramando um comando que estava errado.
                     </p>
                  </div>
+                 <CTAButtonBlock />
             </div>
         </FadeIn>
 
@@ -383,6 +426,7 @@ export const Features: React.FC = () => {
             </div>
 
           </div>
+          <CTAButtonBlock />
         </FadeIn>
 
         {/* Transition to Method */}
@@ -524,6 +568,7 @@ export const Features: React.FC = () => {
                             <p className="text-white font-medium text-lg border-t border-white/10 pt-4 inline-block px-8">
                                 Passo a passo. Sem enrolação.
                             </p>
+                            <CTAButtonBlock />
                         </div>
                     </FadeIn>
 

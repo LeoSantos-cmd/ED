@@ -169,15 +169,15 @@ const App: React.FC = () => {
               <div className="w-full max-w-md flex flex-col gap-4">
                 <button
                   onClick={() => scrollTo('planos')}
-                  className="group relative w-full bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-black text-xl py-5 px-8 rounded-lg shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(245,158,11,0.4)] flex items-center justify-center gap-3 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 overflow-hidden"
+                  className="group relative w-full bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-black text-lg md:text-xl py-5 px-6 md:px-8 rounded-lg shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(245,158,11,0.4)] flex items-center justify-center gap-3 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 overflow-hidden whitespace-nowrap"
                 >
                   <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none"></div>
-                  <span className="relative z-10">CONHECER PROTOCOLO</span>
+                  <span className="relative z-10">CONHECER O PROTOCOLO</span>
                 </button>
 
-                <div className="flex flex-wrap justify-center items-center gap-3 text-gray-400 text-base font-medium w-full text-center uppercase tracking-wide">
+                <div className="flex flex-wrap justify-center items-center gap-3 text-gray-400 text-sm font-medium w-full text-center uppercase tracking-wide">
                   <div className="flex items-center gap-1.5">
-                    <Lock className="w-5 h-5 text-accent" />
+                    <Lock className="w-4 h-4 text-accent" />
                     <span>Acesso imediato</span>
                   </div>
                   <span className="text-gray-700 hidden md:inline">•</span>
@@ -333,30 +333,15 @@ const App: React.FC = () => {
 
       {/* Footer */}
       <footer className="bg-secondary text-gray-500 py-10 border-t border-white/10 text-base">
-        <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-4 opacity-80">
+        <div className="max-w-4xl mx-auto px-4 flex flex-col items-center text-center">
+            <div className="flex items-center gap-2 mb-6 opacity-80">
                 <div className="bg-accent text-white p-1.5 rounded text-sm font-bold">VM</div>
                 <span className="font-bold text-xl text-white">VigorMax Pro</span>
             </div>
-            <p className="mb-4 leading-relaxed text-gray-400 text-base">
+            <p className="mb-6 leading-relaxed text-gray-400 text-base max-w-2xl">
               "Nossa missão é devolver ao homem o controle sobre o próprio corpo e a própria masculinidade, através de conhecimento e prática, sem dependência química."
             </p>
             <p className="text-base">&copy; 2024 VigorMax Pro. Todos os direitos reservados.</p>
-          </div>
-          
-          <div>
-            <h4 className="text-white font-bold mb-4 uppercase text-base tracking-widest">Legal</h4>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-base hover:text-white transition-colors">Termos de Uso</a></li>
-              <li><a href="#" className="text-base hover:text-white transition-colors">Política de Privacidade</a></li>
-              <li><a href="#" className="text-base hover:text-white transition-colors">Aviso Legal</a></li>
-              <li><a href="#" className="text-base hover:text-white transition-colors">Contato</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-white/5 text-center text-base text-gray-600">
-          Este site não é afiliado ao Facebook ou Google. Os resultados podem variar de pessoa para pessoa.
         </div>
       </footer>
     </div>

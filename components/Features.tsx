@@ -102,10 +102,10 @@ export const Features: React.FC = () => {
     <div className="w-full max-w-md mx-auto flex flex-col gap-4 mt-8">
       <a
         href="#planos"
-        className="group relative w-full bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-black text-xl py-5 px-8 rounded-lg shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(245,158,11,0.4)] flex items-center justify-center gap-3 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 overflow-hidden"
+        className="group relative w-full bg-gradient-to-b from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-black font-black text-lg md:text-xl py-5 px-6 md:px-8 rounded-lg shadow-[0_0_40px_rgba(245,158,11,0.2)] transition-all transform hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(245,158,11,0.4)] flex items-center justify-center gap-3 border-b-4 border-amber-700 active:border-b-0 active:translate-y-1 overflow-hidden whitespace-nowrap"
       >
         <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none"></div>
-        <span className="relative z-10">CONHECER PROTOCOLO</span>
+        <span className="relative z-10">CONHECER O PROTOCOLO</span>
       </a>
 
       <div className="flex flex-wrap justify-center items-center gap-3 text-gray-400 text-sm font-medium w-full text-center uppercase tracking-wide">
@@ -316,8 +316,12 @@ export const Features: React.FC = () => {
                         Você não está "consertando" nada. Você está reprogramando um comando que estava errado.
                     </p>
                  </div>
-                 <CTAButtonBlock />
             </div>
+        </FadeIn>
+        
+        {/* CTA Button Block for RCS */}
+        <FadeIn className="mb-10">
+          <CTAButtonBlock />
         </FadeIn>
 
         {/* Emotional Reality Block */}
@@ -426,22 +430,22 @@ export const Features: React.FC = () => {
             </div>
 
           </div>
-          <CTAButtonBlock />
         </FadeIn>
 
-        {/* Transition to Method */}
-        <FadeIn delay={500} className="w-full flex flex-col items-center mt-8 mb-10 px-4 text-center">
-            <div className="space-y-3">
-                <p className="text-xl md:text-2xl text-gray-300 font-medium leading-tight">
-                    Mas como exatamente isso funciona?{" "}
-                    <span className="inline-block w-2"></span>
-                    <br className="hidden md:block" />
-                    Como você vai sair do bloqueio para a confiança?
-                </p>
-                <h2 className="text-4xl md:text-5xl font-black text-accent tracking-tighter drop-shadow-[0_0_25px_rgba(217,119,6,0.3)] pt-2">
-                    É aqui que entra o método.
-                </h2>
-            </div>
+        {/* Narrative Transition Block replacing CTA Button */}
+        <FadeIn className="mb-10">
+          <div className="w-full max-w-md mx-auto flex flex-col gap-4 mt-8">
+             <div className="text-center">
+                 <p className="text-xl md:text-2xl text-gray-300 font-medium leading-tight mb-2">
+                     Mas como exatamente isso funciona?{" "}
+                     <br className="hidden md:block" />
+                     Como você vai sair do bloqueio para a confiança?
+                 </p>
+                 <h2 className="text-4xl md:text-5xl font-black text-accent tracking-tighter drop-shadow-[0_0_25px_rgba(217,119,6,0.3)]">
+                     É aqui que entra o método.
+                 </h2>
+             </div>
+          </div>
         </FadeIn>
 
         {/* "O Despertar do Controle Masculino" Section - Container Visible immediately */}
@@ -552,7 +556,7 @@ export const Features: React.FC = () => {
                     </div>
 
                     {/* Block: Não São Só Informações */}
-                    <FadeIn delay={200} className="max-w-2xl mx-auto mt-10">
+                    <FadeIn delay={200} className="max-w-2xl mx-auto mt-10 mb-10">
                         <div className="bg-surface/80 border border-accent rounded-2xl p-6 md:p-8 text-center shadow-[0_0_30px_rgba(217,119,6,0.15)] relative overflow-hidden">
                             <div className="md:hidden absolute inset-0 w-full h-full -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/5 to-transparent z-0 pointer-events-none"></div>
                             
@@ -568,8 +572,12 @@ export const Features: React.FC = () => {
                             <p className="text-white font-medium text-lg border-t border-white/10 pt-4 inline-block px-8">
                                 Passo a passo. Sem enrolação.
                             </p>
-                            <CTAButtonBlock />
                         </div>
+                    </FadeIn>
+                    
+                    {/* CTA Button Block for Informações Práticas */}
+                    <FadeIn className="mb-10">
+                       <CTAButtonBlock />
                     </FadeIn>
 
                     {/* Histórias Reais */}
